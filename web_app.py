@@ -1,13 +1,14 @@
 import predict
 from flask import Flask, request, jsonify
 
+app = Flask('Movie_recommendation_system')
 
-app = Flask('churn')
 
 @app.route('/movie', methods=['POST'])
 def recommender():
     movie = request.get_json()
     return jsonify(predict.recommend_movies(movie['movie_name'], movie['movie_numbers']))
+
 
 # example: http://localhost:8888/movierecomend?movie=eternalsunshinofthespotlessmind&counter=5
 @app.route('/movierecomend', methods=['GET'])

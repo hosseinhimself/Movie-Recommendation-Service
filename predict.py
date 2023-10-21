@@ -8,7 +8,7 @@ def recommend_movies(movie_title, number_of_movies):
     data = pd.read_csv('movie_dataset.csv')
 
     # Load the TF-IDF vectorizer and cosine similarities from the saved model
-    with open('combined_model.pkl', 'rb') as file:
+    with open('movie_similarity.pkl', 'rb') as file:
         cosine_similarities = pickle.load(file)
 
     # Find the closest match to the provided movie title
