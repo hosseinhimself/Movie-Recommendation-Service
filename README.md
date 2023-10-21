@@ -60,8 +60,6 @@ The Dockerfile included in this project is used to create a Docker container for
 - The Flask web application is exposed on port 8888.
 - The entrypoint is set to run the application using Gunicorn and bind to `0.0.0.0:8888` for external access.
 
-For detailed instructions on how to build and run the Docker container, please refer to the "How to Build and Run the Docker Container" section below.
-
 ## Getting Started
 
 To get started with the Movie Recommendation Service, you need to set up the project environment and run the service. Follow these steps to get started:
